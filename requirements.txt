@@ -1,0 +1,4 @@
+Pillow
+tweepy
+python-dotenv
+requests
