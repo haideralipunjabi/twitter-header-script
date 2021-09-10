@@ -38,8 +38,6 @@ def get_twitter_api():
     return tweepy.API(auth)
 
 # Fetch the status and followers data
-
-
 def get_status_data(api, status_id):
     status = api.get_status(id=status_id)
     followers = api.followers(
@@ -53,7 +51,7 @@ def get_status_data(api, status_id):
         } for follower in followers]        # The username and profile picture only
     }
 
-
+# Draw the Header
 def draw_header(data):
     # Create a new Image 1500 x 500 with background color
     img = Image.new('RGB', (1500, 500), color=COLORS['BACKGROUND'])
