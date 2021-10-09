@@ -40,7 +40,7 @@ def get_twitter_api():
 # Fetch the status and followers data
 def get_status_data(api, status_id):
     status = api.get_status(id=status_id)
-    followers = api.followers(
+    followers = api.get_followers(
         count=3, skip_status=True)    # 3 Latest Followers
     return {
         "likes": status.favorite_count,
